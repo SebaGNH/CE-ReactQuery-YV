@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const RQSuperHeroes = () => {
+export const RQSuperHeroesPage = () => {
   return (
     <div>RQSuperHeroes</div>
   )

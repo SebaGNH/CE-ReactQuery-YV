@@ -17,7 +17,7 @@ yarn add json-server
 yarn backend
 
 - Resources
-http://localhost:5000/products
+http://localhost:5001/superHeroes
 
 
 # React router dom
