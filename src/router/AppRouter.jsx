@@ -1,21 +1,22 @@
-import {Routes,Route,Navigate,Link,NavLink} from 'react-router-dom'
-
-import React from 'react'
-import {HomePage} from '../components'
+import React from 'react';
+import {Routes,Route,Navigate,NavLink} from 'react-router-dom';
+import {HomePage, SuperHeroesPage, RQSuperHeroesPage} from '../components'
 
 export const AppRouter = () => {
   return (
     <>
+      <nav className="navbar navbar-expand-md navbar-dark bg-dark rounded-3">
+          <ul className="navbar-nav">
+            <NavLink  to="/" end >Home </NavLink>
+            <NavLink to="/SuperHeroesPage">SuperHeroesPage </NavLink>
+            <NavLink to="/RQSuperHeroesPage">RQ SuperHeroesPage </NavLink>
+          </ul>
+      </nav>
       <Routes>
-
-        {/*  <Route path='/' element={<MarvelPage />}/> */}
-        {/* <Route path='/MarvelPage' element={<MarvelPage />}/> */}
-      {/*   <Route path='/DcPage' element={<DcPage />}/> */}
-        {/* <Route path='/login' element={<LoginPage />}/> */}
-
         <Route path='/' element={<HomePage />}/>
-        {/* <Route path='/AboutPage' element={<AboutPage />}/> */}
-        {/* <Route path='/*' element={<Navigate to='/' />}/> */}
+        <Route path='/SuperHeroesPage' element={<SuperHeroesPage />}/>
+        <Route path='/RQSuperHeroesPage' element={<RQSuperHeroesPage />}/>
+        <Route path='/*' element={<Navigate to='/' />}/>
       </Routes>
     </>
   )

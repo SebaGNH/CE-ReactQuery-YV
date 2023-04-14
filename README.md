@@ -20,5 +20,8 @@ yarn backend
 http://localhost:5001/superHeroes
 
 
-# React router dom
+## React router dom
 yarn add react-router-dom
+
+## Axios
+yarn add axios
