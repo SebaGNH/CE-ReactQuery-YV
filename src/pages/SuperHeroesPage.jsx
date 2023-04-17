@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 //const resultado = await axios.get(urlAPI);
 
-
 export const SuperHeroesPage = () => {
-  const [isLoading, setIsLoading] = useState(true)
-  const [data, setData] = useState([])
-  const [error, setError] = useState('')
+  const [isLoading, setIsLoading] = useState(true);
+  const [data, setData] = useState([]);
+  const [error, setError] = useState('');
 
   useEffect(() => {
-    axios
+    setTimeout(() => {
+      axios
       .get(' http://localhost:5001/superHeroes')
       .then(res => {
         setData(res.data)
@@ -19,7 +19,8 @@ export const SuperHeroesPage = () => {
         setError(error.message)
         setIsLoading(false)
       })
-  }, [])
+    }, 500);
+  }, []);
 
   if (isLoading) {
     return <h2>Loading...</h2>

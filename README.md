@@ -4,7 +4,10 @@
 https://www.youtube.com/watch?v=Nm0inP3B_zs&list=PLC3y8-rFHvwjTELCrPrcZlo6blLBUspd2&index=2
 
 
-
+// Llamado a la api v1
+const { isLoading, data} = useQuery('super-heroes', () => {
+  return axios.get('http://localhost:5001/superHeroes');
+})
 
 -->
 
@@ -25,3 +28,24 @@ yarn add react-router-dom
 
 ## Axios
 yarn add axios
+
+## React Query
+yarn add react-query
+
+
+
+
+  useEffect(() => {
+    setTimeout(() => {
+      axios
+      .get(' http://localhost:5001/superHeroes')
+      .then(res => {
+        setData(res.data)
+        setIsLoading(false)
+      })
+      .catch(error => {
+        setError(error.message)
+        setIsLoading(false)
+      })
+    }, 1500);
+  }, [])

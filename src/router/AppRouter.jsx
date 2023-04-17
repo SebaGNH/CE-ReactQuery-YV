@@ -1,6 +1,6 @@
 import React from 'react';
 import {Routes,Route,Navigate,NavLink} from 'react-router-dom';
-import {HomePage, SuperHeroesPage, RQSuperHeroesPage} from '../components'
+import {HomePage, SuperHeroesPage, RQSuperHeroesPage} from '../pages'
 
 export const AppRouter = () => {
   return (
