@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export const RQApiHelper = async () => {
+export const fetchHeroesHelper = async () => {
   //Agregar data.data en el map
   //return await axios.get('http://localhost:5001/superHeroes');
 
