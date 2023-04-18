@@ -9,10 +9,19 @@ export const RQSuperHeroesPage = () => {
     //cacheTime: 5000, // limpia caché RQ al estar en otro componente
 
     // Default 0s
-    staleTime: 30000, // Cachea 30seg sin hacer nuevas solicitudes a la api al retomar la pestaña "componente", se usa para reducir las solicitudes
+    //staleTime: 30000, // Cachea 30seg sin hacer nuevas solicitudes a la api al retomar la pestaña "componente", se usa para reducir las solicitudes
+
+    // refetch = re-peticiona haciendo una nueva llamada a la api
+    //refetchOnMount: true,
+    //refetchOnWindowFocus: false, // re-peticiona al hacer foco
+
+    //refetchInterval: 2000, // re-peticiona cada 2 segundos
+    //refetchIntervalInBackground: true, // re-peticiona al no usar la pestaña
+
+    
 
   });
-
+// keepPreviousData: true, refetchOnWindowFocus: false }
   // console.log({isLoading, isFetching})
 
   if (isError) {

@@ -5,13 +5,23 @@ import {HomePage, SuperHeroesPage, RQSuperHeroesPage} from '../pages'
 export const AppRouter = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-md navbar-dark bg-dark rounded-3">
-          <ul className="navbar-nav">
-            <NavLink  to="/" end >Home </NavLink>
-            <NavLink to="/SuperHeroesPage">SuperHeroesPage </NavLink>
-            <NavLink to="/RQSuperHeroesPage">RQ SuperHeroesPage </NavLink>
-          </ul>
-      </nav>
+      <div>
+        <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+          <div className="container-fluid">
+            <div className="collapse navbar-collapse" id="navbarColor01">
+              <ul className="navbar-nav me-auto">
+
+                <NavLink  to="/" end  className="nav-link btn btn-info mx-2">Home</NavLink>
+                <NavLink to="/SuperHeroesPage" className="nav-link btn btn-info mx-2">SuperHeroesPage</NavLink>
+              <NavLink to="/RQSuperHeroesPage" className="nav-link btn btn-info mx-2">RQ SuperHeroesPage</NavLink>
+
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+
+      </div>
       <Routes>
         <Route path='/' element={<HomePage />}/>
         <Route path='/SuperHeroesPage' element={<SuperHeroesPage />}/>
@@ -41,5 +51,15 @@ export const AppRouter = () => {
     </div>
   </nav>
 
+
+
+
+    <nav className="navbar navbar-expand-md navbar-dark bg-dark rounded-3">
+          <ul className="navbar-nav">
+            <NavLink  to="/" end >Home </NavLink>
+            <NavLink to="/SuperHeroesPage">SuperHeroesPage </NavLink>
+            <NavLink to="/RQSuperHeroesPage">RQ SuperHeroesPage </NavLink>
+          </ul>
+      </nav>
 
 */

@@ -1,3 +1,5 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.2.0/darkly/bootstrap.min.css');
+
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +11,7 @@ body {
   background-color: #292929;
   color: #fff;
 }
-
+/*
 .App {
   text-align: center;
 }
@@ -62,3 +64,5 @@ nav ul li {
     transform: rotate(360deg);
   }
 }
+
+*/
