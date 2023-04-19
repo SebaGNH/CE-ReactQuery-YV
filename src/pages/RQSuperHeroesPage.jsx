@@ -18,8 +18,6 @@ export const RQSuperHeroesPage = () => {
     //refetchInterval: 2000, // re-peticiona cada 2 segundos
     //refetchIntervalInBackground: true, // re-peticiona al no usar la pestaña
 
-    
-
   });
 // keepPreviousData: true, refetchOnWindowFocus: false }
   // console.log({isLoading, isFetching})
