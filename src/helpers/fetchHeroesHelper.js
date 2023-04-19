@@ -1,5 +1,6 @@
 import axios from 'axios'
 
+// Si hay error hace 3 peticiones antes de mostrar el error
 export const fetchHeroesHelper = async () => {
   //Agregar data.data en el map
   //return await axios.get('http://localhost:5001/superHeroes');

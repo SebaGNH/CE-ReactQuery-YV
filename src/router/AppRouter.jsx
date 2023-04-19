@@ -1,6 +1,6 @@
 import React from 'react';
 import {Routes,Route,Navigate,NavLink} from 'react-router-dom';
-import {HomePage, SuperHeroesPage, RQSuperHeroesPage, RQ_02_SHPage_onClick} from '../pages'
+import {HomePage, SuperHeroesPage, RQSuperHeroesPage, RQ_02_SHPage_onClick, RQ_03_CallbackSuccessError} from '../pages'
 
 export const AppRouter = () => {
   return (
@@ -15,6 +15,7 @@ export const AppRouter = () => {
                 <NavLink to="/SuperHeroesPage" className="nav-link btn btn-info mx-2">SuperHeroesPage</NavLink>
               <NavLink to="/RQSuperHeroesPage" className="nav-link btn btn-info mx-2">RQ SuperHeroesPage</NavLink>
               <NavLink to="/RQ02SHPageonClick" className="nav-link btn btn-info mx-2">RQ SuperHeroesPage</NavLink>
+              <NavLink to="/RQ03CallbackSuccessError" className="nav-link btn btn-info mx-2">RQ CallBacks</NavLink>
 
               </ul>
             </div>
@@ -28,6 +29,7 @@ export const AppRouter = () => {
         <Route path='/SuperHeroesPage' element={<SuperHeroesPage />}/>
         <Route path='/RQSuperHeroesPage' element={<RQSuperHeroesPage />}/>
         <Route path='/RQ02SHPageonClick' element={<RQ_02_SHPage_onClick />}/>
+        <Route path='/RQ03CallbackSuccessError' element={<RQ_03_CallbackSuccessError />}/>
         <Route path='/*' element={<Navigate to='/' />}/>
       </Routes>
     </>
