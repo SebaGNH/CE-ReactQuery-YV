@@ -13,7 +13,13 @@ export const RQ_03_CallbackSuccessError = () => {
   // React Query
   const { isLoading, data, isError, error, isFetching } = useQuery('super-heroes', fetchHeroesHelper, {
     onSuccess: onSuccess, // Manejo de errores
-    onError // ambos se pueden simplificar
+    onError, // ambos se pueden simplificar
+
+    // Transformación de datos
+    select: (data) => {
+      const superHeroNames = data.data.map( (hero) => hero.name);
+      return superHeroNames;
+    }
   });
 
 
@@ -32,9 +38,9 @@ export const RQ_03_CallbackSuccessError = () => {
     <>
     <h2>RQ Callbacks</h2>
 
-    {
-      data?.data.map((hero)=>{
-      return <div key={hero.name}>{hero.name}</div>
+    { // data hace referencia a superHeroNames
+      data.map( (heroName) => {
+        return <div key={heroName}>{heroName}</div>
       })
     }
   </>
