@@ -1,6 +1,6 @@
 import React from 'react';
 import {Routes,Route,Navigate,NavLink} from 'react-router-dom';
-import {HomePage, SuperHeroesPage, RQSuperHeroesPage, RQ_02_SHPage_onClick, RQ_03_CallbackSuccessError} from '../pages'
+import {HomePage, SuperHeroesPage, RQSuperHeroesPage, RQ_02_SHPage_onClick, RQ_03_CallbackSuccessError, RQ_04_hookCustomQuery} from '../pages'
 
 export const AppRouter = () => {
   return (
@@ -16,7 +16,16 @@ export const AppRouter = () => {
               <NavLink to="/RQSuperHeroesPage" className="nav-link btn btn-info mx-2">RQ SuperHeroesPage</NavLink>
               <NavLink to="/RQ02SHPageonClick" className="nav-link btn btn-info mx-2">RQ SuperHeroesPage</NavLink>
               <NavLink to="/RQ03CallbackSuccessError" className="nav-link btn btn-info mx-2">RQ CallBacks</NavLink>
+              </ul>
+            </div>
+          </div>
+        </nav>
 
+        <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+          <div className="container-fluid">
+            <div className="collapse navbar-collapse" id="navbarColor01">
+              <ul className="navbar-nav me-auto">
+              <NavLink to="/RQ04hookCustomQuery" className="nav-link btn btn-info mx-2">RQ SuperHeroesPage</NavLink>
               </ul>
             </div>
           </div>
@@ -30,6 +39,7 @@ export const AppRouter = () => {
         <Route path='/RQSuperHeroesPage' element={<RQSuperHeroesPage />}/>
         <Route path='/RQ02SHPageonClick' element={<RQ_02_SHPage_onClick />}/>
         <Route path='/RQ03CallbackSuccessError' element={<RQ_03_CallbackSuccessError />}/>
+        <Route path='/RQ04hookCustomQuery' element={<RQ_04_hookCustomQuery />}/>
         <Route path='/*' element={<Navigate to='/' />}/>
       </Routes>
     </>
