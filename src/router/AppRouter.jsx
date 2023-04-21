@@ -1,6 +1,6 @@
 import React from 'react';
 import {Routes,Route,Navigate,NavLink} from 'react-router-dom';
-import {HomePage, SuperHeroesPage, RQSuperHeroesPage, RQ_02_SHPage_onClick, RQ_03_CallbackSuccessError, RQ_04_hookCustomQuery} from '../pages'
+import {HomePage, SuperHeroesPage, RQ_01_SuperHeroesPage, RQ_02_SHPage_onClick, RQ_03_CallbackSuccessError, RQ_04_hookCustomQuery, RQ_05_ByID} from '../pages'
 
 export const AppRouter = () => {
   return (
@@ -13,8 +13,8 @@ export const AppRouter = () => {
 
                 <NavLink  to="/" end  className="nav-link btn btn-info mx-2">Home</NavLink>
                 <NavLink to="/SuperHeroesPage" className="nav-link btn btn-info mx-2">SuperHeroesPage</NavLink>
-              <NavLink to="/RQSuperHeroesPage" className="nav-link btn btn-info mx-2">RQ SuperHeroesPage</NavLink>
-              <NavLink to="/RQ02SHPageonClick" className="nav-link btn btn-info mx-2">RQ SuperHeroesPage</NavLink>
+              <NavLink to="/RQ_01_SuperHeroesPage" className="nav-link btn btn-info mx-2">RQ SuperHeroesPage</NavLink>
+              <NavLink to="/RQ02SHPageonClick" className="nav-link btn btn-info mx-2">Refetch</NavLink>
               <NavLink to="/RQ03CallbackSuccessError" className="nav-link btn btn-info mx-2">RQ CallBacks</NavLink>
               </ul>
             </div>
@@ -25,7 +25,8 @@ export const AppRouter = () => {
           <div className="container-fluid">
             <div className="collapse navbar-collapse" id="navbarColor01">
               <ul className="navbar-nav me-auto">
-              <NavLink to="/RQ04hookCustomQuery" className="nav-link btn btn-info mx-2">RQ SuperHeroesPage</NavLink>
+              <NavLink to="/RQ04hookCustomQuery" className="nav-link btn btn-info mx-2">Custom Hook</NavLink>
+              <NavLink to="/rq-by-id/:heroid" className="nav-link btn btn-info mx-2">Query By ID</NavLink>
               </ul>
             </div>
           </div>
@@ -36,10 +37,11 @@ export const AppRouter = () => {
       <Routes>
         <Route path='/' element={<HomePage />}/>
         <Route path='/SuperHeroesPage' element={<SuperHeroesPage />}/>
-        <Route path='/RQSuperHeroesPage' element={<RQSuperHeroesPage />}/>
+        <Route path='/RQ_01_SuperHeroesPage' element={<RQ_01_SuperHeroesPage />}/>
         <Route path='/RQ02SHPageonClick' element={<RQ_02_SHPage_onClick />}/>
         <Route path='/RQ03CallbackSuccessError' element={<RQ_03_CallbackSuccessError />}/>
         <Route path='/RQ04hookCustomQuery' element={<RQ_04_hookCustomQuery />}/>
+        <Route path='/rq-by-id/:heroid' element={<RQ_05_ByID />}/>
         <Route path='/*' element={<Navigate to='/' />}/>
       </Routes>
     </>

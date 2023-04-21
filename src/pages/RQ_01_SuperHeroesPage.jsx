@@ -1,7 +1,7 @@
 import { useQuery } from 'react-query';
 import { fetchHeroesHelper } from '../helpers/fetchHeroesHelper';
 
-export const RQSuperHeroesPage = () => {
+export const RQ_01_SuperHeroesPage = () => {
   // Llamado api usando RQ, "data" global de "App.js"
   // 'super-heroes' identificador, similar a un "key"
   const { isLoading, data, isError, error, isFetching} = useQuery('super-heroes', fetchHeroesHelper, {
@@ -33,7 +33,7 @@ export const RQSuperHeroesPage = () => {
 
   return (
     <>
-      <h2>RQ Super Heros Page</h2>
+      <h2>RQ Super Heros Page 1</h2>
       {
         data?.data.map((hero)=>{
         return <div key={hero.name}>{hero.name}</div>

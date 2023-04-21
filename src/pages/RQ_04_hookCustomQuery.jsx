@@ -28,7 +28,7 @@ export const RQ_04_hookCustomQuery = () => {
   // Return
   return (
     <>
-    <h2>RQ Callbacks</h2>
+    <h2>Custom Hook</h2>
 
     {
       data.map( (heroName) => {
