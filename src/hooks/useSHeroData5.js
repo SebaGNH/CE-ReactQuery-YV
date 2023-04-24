@@ -7,7 +7,7 @@ export const fetchSHID = async (heroID) => {
 }
 
 
-export const useSHeroData = (heroID) => {
+export const useSHeroData5 = (heroID) => {
   return useQuery(['super-hero-id', heroID], () => fetchSHID(heroID))
 }
 

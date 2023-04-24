@@ -1,18 +1,15 @@
 import { useQuery } from 'react-query';
 import axios from 'axios';
 
-export const fetchSHID = async (heroID) => {
+export const fetchSHID = async () => {
   return await axios.get(`http://localhost:5001/superHeroes`);
 }
 
 
-export const useSHeroData = (heroID) => {
-  return useQuery(['super-hero-id', heroID], () => fetchSHID(heroID))
-}
 
-
+/* Modo ejemplo, no lo uso */
 export const use05QueryID = (onSuccess, onError) => {
-  return useQuery('super-heroes', fetchSHID, {
+  return useQuery('super-hero-id', fetchSHID, {
     onSuccess: onSuccess, // Manejo de errores
     onError, // ambos se pueden simplificar
 
@@ -22,4 +19,4 @@ export const use05QueryID = (onSuccess, onError) => {
     //  return superHeroNames;
     //}
   });
-}
+}/* Modo ejemplo, no lo uso */
