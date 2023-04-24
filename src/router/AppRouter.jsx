@@ -1,6 +1,6 @@
 import React from 'react';
 import {Routes,Route,Navigate,NavLink} from 'react-router-dom';
-import {HomePage, SuperHeroesPage, RQ_01_SuperHeroesPage, RQ_02_SHPage_onClick, RQ_03_CallbackSuccessError, RQ_04_hookCustomQuery, RQ_05_ByID} from '../pages'
+import {HomePage, SuperHeroesPage, RQ_01_SuperHeroesPage, RQ_02_SHPage_onClick, RQ_03_CallbackSuccessError, RQ_04_hookCustomQuery, RQ_05_ByID, RQ_06_ParallelQueryes} from '../pages'
 import { RQ_05_superHero } from '../components/RQ_05_superHero'
 
 export const AppRouter = () => {
@@ -28,6 +28,7 @@ export const AppRouter = () => {
               <ul className="navbar-nav me-auto">
               <NavLink to="/RQ04hookCustomQuery" className="nav-link btn btn-info mx-2">Custom Hook</NavLink>
               <NavLink to="/rq-by-id/" className="nav-link btn btn-info mx-2">Query By ID</NavLink>
+              <NavLink to="/RQ06ParallelQueryes/" className="nav-link btn btn-info mx-2">Parallel Queryes</NavLink>
               </ul>
             </div>
           </div>
@@ -46,6 +47,7 @@ export const AppRouter = () => {
         <Route path='/rq-by-id/' element={<RQ_05_ByID />}/>
         {/* Mismo path "uno con id", pero diferente element */}
         <Route path='/rq-by-id/:heroid' element={<RQ_05_superHero />}/>
+        <Route path='/RQ06ParallelQueryes/' element={<RQ_06_ParallelQueryes />}/>
         <Route path='/*' element={<Navigate to='/' />}/>
       </Routes>
     </>

@@ -20,6 +20,3 @@ export const RQ_05_superHero = () => {
     </div>
   )
 }
-
-
-/* - {data?data.alterEgo } */
