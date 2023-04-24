@@ -1,5 +1,5 @@
 
-import { useQueryID } from "../hooks/useQueryID";
+import { use05QueryID } from "../hooks/use05QueryID";
 import { Link } from 'react-router-dom';
 
 export const RQ_05_ByID = () => {
@@ -11,7 +11,7 @@ export const RQ_05_ByID = () => {
     console.log('Error fetching', error);
   }
 
-  const { isLoading, data, isError, error, isFetching, refetch} = useSHeroData( onSuccess, onError );
+  const { isLoading, data, isError, error, isFetching, refetch} = use05QueryID( onSuccess, onError );
 
 
   if (isError) {
