@@ -2,20 +2,19 @@ import { useQuery } from 'react-query';
 import axios from 'axios';
 
 
-export const fetchSH = async () => {
-  return await axios.get(`http://localhost:5001/superHeroes`);
-}
-export const fetchFriends = async () => {
-  return await axios.get(`http://localhost:5001/friends`);
+const fetchSuperHeroesData = () => {
+  return axios.get(`http://localhost:5001/superHeroes`);
 }
 
-
-
-
-export const use06FetchParallelQueryes = (onSuccess, onError) => {
-  return useQuery('super-hero-and-heroes', fetchSH);
+const fetchFriendsData = () => {
+  return axios.get(`http://localhost:5001/friends`);
 }
 
-export const use06FetchParallelQueryesFriends = (onSuccess, onError) => {
-  return useQuery('super-hero-and-friends', fetchFriends);
+
+export const use06FetchParallelQueryesHeroes = () => {
+  return useQuery('super-heroes-data', fetchSuperHeroesData);
+}
+
+export const use06FetchParallelQueryesFriends = () => {
+  return useQuery('super-friends-data', fetchFriendsData);
 }
