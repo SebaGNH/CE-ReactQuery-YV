@@ -9,6 +9,9 @@ const { isLoading, data} = useQuery('super-heroes', () => {
   return axios.get('http://localhost:5001/superHeroes');
 })
 
+//Repo Git
+https://github.com/gopinav/React-Query-Tutorials/blob/master/react-query-demo/src/components/SuperHeroes.page.js
+
 -->
 
 ## JSON Server   https://www.npmjs.com/package/json-server

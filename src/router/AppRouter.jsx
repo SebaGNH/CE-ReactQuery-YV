@@ -49,7 +49,7 @@ export const AppRouter = () => {
         {/* Mismo path "uno con id", pero diferente element */}
         <Route path='/rq-by-id/:heroid' element={<RQ_05_superHero />}/>
         <Route path='/RQ06ParallelQueryes/' element={<RQ_06_ParallelQueryes />}/>
-        <Route path='/RQ07dinamicParalelQueryes/' element={<RQ_07_dinamicParalelQueryes />}/>
+        <Route path='/RQ07dinamicParalelQueryes/' element={<RQ_07_dinamicParalelQueryes  heroIDs={[1, 3]}/>}/>
         <Route path='/*' element={<Navigate to='/' />}/>
       </Routes>
     </>
