@@ -17,8 +17,10 @@ export const RQ_07_dinamicParalelQueryes = ({heroIDs}) => {
     })
   );
 
+  //console.log(queryResults);
   console.log(queryResults);
   return (
     <div>Dinamic Parallel Queryes</div>
+
   )
 }
