@@ -7,3 +7,4 @@ export * from './RQ_04_hookCustomQuery';
 export * from './RQ_05_ByID';
 export * from './RQ_06_ParallelQueryes';
 export * from './RQ_07_dinamicParalelQueryes';
+export * from './RQ_08_dependentQueries';

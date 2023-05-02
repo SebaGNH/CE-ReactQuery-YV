@@ -29,5 +29,17 @@
       "id": 3,
       "name": "Rachel Green"
     }
+  ],
+  "users":[
+    {
+      "id": "correoEjemplo@correo.com",
+      "channelId":"sinCanal"
+    }
+  ],
+  "channels":[
+    {
+      "id": "sinCanal",
+      "cursos": ["react","vue","angular"]
+    }
   ]
 }
