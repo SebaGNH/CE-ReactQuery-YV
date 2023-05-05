@@ -33,12 +33,12 @@
   "users":[
     {
       "id": "correoEjemplo@correo.com",
-      "channelId":"sinCanal"
+      "channelId":"Canal YT Pruebas Ejemplo"
     }
   ],
   "channels":[
     {
-      "id": "sinCanal",
+      "id": "Canal YT Pruebas Ejemplo",
       "cursos": ["react","vue","angular"]
     }
   ]

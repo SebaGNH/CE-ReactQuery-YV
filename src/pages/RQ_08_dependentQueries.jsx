@@ -20,10 +20,14 @@ export const RQ_08_dependentQueries = ({email}) => { //Viene de la la ruta
     // después que se obtenga la info de channelId obtenga los detalles
     enabled: !!channelId,
   })
+  //console.log(channelId); // sinCanal
 
 
   return (
-    <div>RQ_08_dependentQueries</div>
+    <>
+      <h2>RQ_08_dependentQueries</h2>
+      <p>{channelId}</p>
+    </>
   )
 }
 

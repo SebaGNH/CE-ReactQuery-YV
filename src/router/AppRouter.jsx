@@ -1,7 +1,7 @@
 import React from 'react';
 import {Routes,Route,Navigate,NavLink} from 'react-router-dom';
-import {HomePage, SuperHeroesPage, RQ_01_SuperHeroesPage, RQ_02_SHPage_onClick, RQ_03_CallbackSuccessError, RQ_04_hookCustomQuery, RQ_05_ByID, RQ_06_ParallelQueryes, RQ_07_dinamicParalelQueryes, RQ_08_dependentQueries} from '../pages'
-import { RQ_05_superHero } from '../components/RQ_05_superHero'
+import {HomePage, SuperHeroesPage, RQ_01_SuperHeroesPage, RQ_02_SHPage_onClick, RQ_03_CallbackSuccessError, RQ_04_hookCustomQuery, RQ_05_ByID, RQ_06_ParallelQueryes, RQ_07_dinamicParalelQueryes, RQ_08_dependentQueries, RQ_09_InitialQueryData} from '../pages'
+import { RQ_05_superHero, RQ_09_initialDataSuperHero } from '../components/'
 
 export const AppRouter = () => {
   return (
@@ -22,6 +22,7 @@ export const AppRouter = () => {
           </div>
         </nav>
 
+        {/* Segunda fila de botones */}
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
           <div className="container-fluid">
             <div className="collapse navbar-collapse" id="navbarColor01">
@@ -31,6 +32,18 @@ export const AppRouter = () => {
               <NavLink to="/RQ06ParallelQueryes/" className="nav-link btn btn-info mx-2">Parallel Queryes</NavLink>
               <NavLink to="/RQ07dinamicParalelQueryes/" className="nav-link btn btn-info mx-2">Parallel Queryes</NavLink>
               <NavLink to="/rq-dependent/" className="nav-link btn btn-info mx-2">Dependent Queryes</NavLink>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+
+        {/* Tercer fila de botones */}
+        <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+          <div className="container-fluid">
+            <div className="collapse navbar-collapse" id="navbarColor01">
+              <ul className="navbar-nav me-auto">
+              <NavLink to="/rq-initialquerydata" className="nav-link btn btn-info mx-2">Initial Query Data</NavLink>
               </ul>
             </div>
           </div>
@@ -52,7 +65,10 @@ export const AppRouter = () => {
         <Route path='/RQ06ParallelQueryes/' element={<RQ_06_ParallelQueryes />}/>
         <Route path='/RQ07dinamicParalelQueryes/' element={<RQ_07_dinamicParalelQueryes  heroIDs={[1, 3]}/>}/>
         <Route path='/rq-dependent' element={<RQ_08_dependentQueries email='correoEjemplo@correo.com'/>}/>
-        <Route path='/*' element={<Navigate to='/' />}/>
+
+        {/* Tercer Fila */}
+        <Route path='/rq-initialquerydata' element={<RQ_09_InitialQueryData />}/>
+        <Route path='/rq-initialquerydata/:heroid' element={<RQ_09_initialDataSuperHero />}/>
       </Routes>
     </>
   )
